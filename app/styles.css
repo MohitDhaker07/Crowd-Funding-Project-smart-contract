@@ -1,11 +1,14 @@
+.inner_body{
+  background-image: none;
+  border-radius: 2rem;
+}
+
 body {
+  background-color: ;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* background-image: url('path/to/your/image.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: blur(5px); */
+
 }
 
 header {
@@ -15,6 +18,8 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+
 
 h1 {
   margin: 0;

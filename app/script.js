@@ -9,29 +9,41 @@ if (typeof web3 !== 'undefined') {
 }
 
 // Connect the user's wallet
-async function connectWallet() {
-    try {
-        // Request access to the user's accounts
-        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-
-        // Set the active account
-        const selectedAccount = accounts[0];
-
-        // Display the connected account address 
-        console.log('Connected account:', selectedAccount);
-        document.getElementById('wallet-status').innerText = 'Connected';
-
-
-    } catch (error) {
-
-        console.error('Failed to connect wallet:', error);
-
-        document.getElementById('wallet-status').innerText = 'Error connecting wallet';
-
+function connectToMetaMask() {
+    // Check if MetaMask is available
+    if (typeof window.ethereum === 'undefined') {
+      alert('Please install MetaMask to use this feature.');
+      return;
     }
-}
-
-
+  
+    // Requesting access to the user's accounts
+    ethereum.request({ method: 'eth_requestAccounts' })
+      .then((accounts) => {
+        const account = accounts[0];
+  
+        // Updating the button's inner HTML
+        const connectButton = document.getElementById('connectButton');
+        connectButton.innerHTML = 'Connected';
+  
+        // Getting the balance of the account
+        ethereum.request({
+          method: 'eth_getBalance',
+          params: [account, 'latest']
+        })
+          .then((balance) => {
+            // Updating the HTML with the account balance
+            const balanceElement = document.getElementById('balance');
+            balanceElement.innerHTML = `Account Balance: ${balance} wei`;
+          })
+          .catch((error) => {
+            console.error('Error retrieving balance:', error);
+          });
+      })
+      .catch((error) => {
+        console.error('Error connecting to MetaMask:', error);
+      });
+  }
+  
 
 function sendEther() {
 
