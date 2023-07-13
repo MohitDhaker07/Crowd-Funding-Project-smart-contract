@@ -1,5 +1,5 @@
 .inner_body{
-  background-image: none;
+  background-image:url();
   border-radius: 2rem;
 }
 
@@ -27,14 +27,24 @@ h1 {
 
 .btns {
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 1 rem;
   border: none;
+  background-color: #2a9df4;
+  width: 10rem;
+  height: 4rem;
+  margin: 1rem;
+  padding: auto;
+  color: #fff;
+  cursor: pointer;
+
 }
 
 #content {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
+  /* background-color: lightblue; */
+  border-radius: 1rem;
 }
 
 h2 {
@@ -48,3 +58,9 @@ button {
 #output-message {
   font-weight: bold;
 }
+
+.cmpg-action{
+  /* display:flex; */
+}
+
+
