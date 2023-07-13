@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crowdfunding on Blockchain</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Crowdfunding on Blockchain</h1>
+      <button id="connectButton" onclick="connectToMetaMask()" class="btns">
+        connect wallet
+      </button>
+    </header>
+    <div class="inner_body">
+      <div id="content">
+        <section id="campaign-info">
+          <h2>Campaign Information</h2>
+          <p id="balance">Account Balance:</p>
+        </section>
+
+        <section id="campaign-actions" class="cmpg-action">
+          <h2>Campaign Actions</h2>
+          <button class="btns" onclick="sendEther()">Send Ether</button>
+          <button class="btns" onclick="getBalance()">
+            Get Contract Balance
+          </button>
+          <button class="btns" onclick="refund()">Refund</button>
+          <button class="btns" onclick="createRequest()">Create Request</button>
+          <button class="btns" onclick="voteRequest()">Vote on Request</button>
+          <button class="btns" onclick="makePayment()">Make Payment</button>
+        </section>
+
+        <section id="output">
+          <h2>Output</h2>
+          <p id="output-message"></p>
+        </section>
+      </div>
+
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    </div>
+  </body>
+</html>

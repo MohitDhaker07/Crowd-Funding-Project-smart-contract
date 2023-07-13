@@ -1,0 +1,66 @@
+.inner_body{
+  background-image:url();
+  border-radius: 2rem;
+}
+
+body {
+  background-color: ;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+header {
+  background-color: #2a9df4;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+h1 {
+  margin: 0;
+}
+
+.btns {
+  border-radius: 0.5rem;
+  padding: 1 rem;
+  border: none;
+  background-color: #2a9df4;
+  width: 10rem;
+  height: 4rem;
+  margin: 1rem;
+  padding: auto;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+#content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  /* background-color: lightblue; */
+  border-radius: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+button {
+  margin-right: 10px;
+}
+
+#output-message {
+  font-weight: bold;
+}
+
+.cmpg-action{
+  /* display:flex; */
+}
+
+
