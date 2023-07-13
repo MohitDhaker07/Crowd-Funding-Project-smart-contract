@@ -39,6 +39,13 @@ h1 {
 
 }
 
+.connect_btn{
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
 #content {
   max-width: 800px;
   margin: 20px auto;
